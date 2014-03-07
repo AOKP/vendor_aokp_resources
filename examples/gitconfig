@@ -1,0 +1,9 @@
+[user]
+    name =
+    email =
+[color]
+    ui = true
+[core]
+    editor = nano
+[alias]
+        gl = log --pretty=oneline

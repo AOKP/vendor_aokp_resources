@@ -1,0 +1,30 @@
+# Custom rc for all things AOKP. You'll need to import this in your main
+# profile/rc via
+#   . ~/.aokprc
+# This will add some handy aliases and env variables that we us on a
+# regular basis.
+
+# Define the location of AOKP's source tree
+AOKP_HOME=
+
+# Make reposync less verbose
+AOKP_REPOSYNC_QUIET=true
+
+# ccahe
+export USE_CCACHE=1
+export CCACHE_DIR="$AOKP_HOME"/.ccache
+
+# Functions
+
+function aokp {
+  cd "$AOKP_HOME"
+  . build/envsetup.sh
+  if [ "$1" = "-r" ]; then
+    reposync
+  fi
+}
+
+function nuke {
+  rm -rf "$AOKP_HOME"out/target/product/"$@"
+}
+

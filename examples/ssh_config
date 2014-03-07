@@ -1,0 +1,4 @@
+Host gerrit
+  Hostname gerrit.aokp.co
+  Port 29418
+  User
