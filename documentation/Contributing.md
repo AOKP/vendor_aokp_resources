@@ -48,7 +48,7 @@ Several other guidelines that are good to follow can be found [here](http://tbag
 Pushing a new patch to AOKP's gerrit instance
 ---
 
-###### *Note: for the purpose of these examples, we're assuming that you're using the .gitconfig included in the examples directory of this repository.*
+##### *Note: for the purpose of these examples, we're assuming that you're using the .gitconfCDig included in the examples directory of this repository.*
 
 #### Push a patch for public review
 ```shell
@@ -68,7 +68,7 @@ or
 pspush drafts
 ```
 
-###### *Note: you will have to push to drafts with each updated patch set or it will be published publicly. repo upload will also make the patch public.*
+##### *Note: you will have to push to drafts with each updated patch set or it will be published publicly. repo upload will also make the patch public.*
 
 One can also push directly through review, but you need special permissions to do that, so for the sake of the general public, this will be skipped.
 
@@ -128,8 +128,8 @@ pstest 11111
 ```
 pstest will automatically find the latest patch set with that Change Number and cherry pick it to the repository.
 
-###### *Note: in both methods listed above you must be cd'd into the repository the patch is modifying.*
+##### *Note: in both methods listed above you must be cd'd into the repository the patch is modifying.*
 
-##### Merge Conflicts
+#### Merge Conflicts
 
 More on this to come. They could just need rebasing, it could be a bad patch. But it needs fixing. Conflicts are separated by <<< and >>> and files that have conflicts are listed in git status and git diff.
