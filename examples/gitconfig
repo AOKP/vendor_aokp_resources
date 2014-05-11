@@ -1,9 +1,11 @@
 [user]
     name =
     email =
+[review "gerrit.aokp.co"]
+  username = championswimmer
 [color]
     ui = true
 [core]
     editor = nano
 [alias]
-        gl = log --pretty=oneline
+        gl = log --oneline --color --graph --decorate

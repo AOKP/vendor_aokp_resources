@@ -19,12 +19,20 @@ export CCACHE_DIR="$AOKP_HOME"/.ccache
 function aokp {
   cd "$AOKP_HOME"
   . build/envsetup.sh
+  #to sync
   if [ "$1" = "-r" ]; then
     reposync
+  fi
+  #to update a change to gerrit
+  if [ "$1" = "-u" ]; then
+    repo start kitkat .;
+    git add -A;
+    git commit -s;
+    repo upload .;
   fi
 }
 
 function nuke {
-  rm -rf "$AOKP_HOME"out/target/product/"$@"
+  rm -rf "$AOKP_HOME/out/target/product/$@"
 }
 
